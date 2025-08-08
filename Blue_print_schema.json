@@ -1,0 +1,372 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "This is a blueprint for an Electricity Bill",
+	"class": "Electricity-Bill",
+	"type": "object",
+	"definitions": {
+		"ADDRESS_DETAILS": {
+			"type": "object",
+			"properties": {
+				"street_address": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Street address where the electricity service is provided"
+				},
+				"city": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "City where the electricity service is provided"
+				},
+				"state": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "State where the electricity service is provided"
+				},
+				"zip_code": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Zip code where the electricity service is provided"
+				}
+			}
+		},
+		"PAYMENT_DETAILS": {
+			"type": "object",
+			"properties": {
+				"payment_received_date": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Date when the payment was received"
+				},
+				"billing_detail": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Details about the billing period"
+				},
+				"payment_amount": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Amount of the payment received"
+				},
+				"billing_period_start_date": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Start date of the billing period"
+				},
+				"billing_period_end_date": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "End date of the billing period"
+				},
+				"billing_period_days": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Number of days in the billing period"
+				}
+			}
+		},
+		"ELECTRIC_METER_DETAILS": {
+			"type": "object",
+			"properties": {
+				"meter_number": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Unique identifier for the electricity meter"
+				},
+				"current_meter_read": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Current electricity meter reading"
+				},
+				"previous_meter_read": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Previous electricity meter reading"
+				},
+				"meter_read_difference": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Difference between current and previous meter readings"
+				},
+				"meter_multiplier": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Multiplier used to calculate the electricity usage"
+				},
+				"electricity_usage": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Total electricity usage for the billing period"
+				}
+			}
+		},
+		"ELECTRIC_USAGE_SUMMARY": {
+			"type": "object",
+			"properties": {
+				"total_kwh": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Total electricity usage in kWh"
+				},
+				"summer_kwh": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Electricity usage during summer months in kWh"
+				}
+			}
+		},
+		"ELECTRIC_DELIVERY_CHARGES": {
+			"type": "object",
+			"properties": {
+				"charge_description": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Description of the electricity delivery charge"
+				},
+				"usage": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Electricity usage amount for the charge"
+				},
+				"unit": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Unit of the electricity usage for the charge"
+				},
+				"rate": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Rate per unit for the electricity delivery charge"
+				},
+				"charge_amount": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Total charge amount for the electricity delivery"
+				}
+			}
+		},
+		"ELECTRIC_SUPPLY_CHARGES": {
+			"type": "object",
+			"properties": {
+				"charge_description": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Description of the electricity supply charge"
+				},
+				"usage": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Electricity usage amount for the charge"
+				},
+				"unit": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Unit of the electricity usage for the charge"
+				},
+				"rate": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Rate per unit for the electricity supply charge"
+				},
+				"charge_amount": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Total charge amount for the electricity supply"
+				}
+			}
+		},
+		"TAXES_AND_OTHER_FEES": {
+			"type": "object",
+			"properties": {
+				"charge_description": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Description of the tax or other fee"
+				},
+				"usage": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Electricity usage amount for the tax or fee"
+				},
+				"unit": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Unit of the electricity usage for the tax or fee"
+				},
+				"rate": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Rate per unit for the tax or fee"
+				},
+				"charge_amount": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Total charge amount for the tax or fee"
+				}
+			}
+		},
+		"electric_delivery_charges": {
+			"type": "object",
+			"properties": {
+				"charge_description": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Description of the electricity delivery charge"
+				},
+				"usage": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Electricity usage amount for the charge"
+				},
+				"unit": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Unit of the electricity usage for the charge"
+				},
+				"rate": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Rate per unit for the electricity delivery charge"
+				},
+				"charge_amount": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Total charge amount for the electricity delivery"
+				}
+			}
+		},
+		"electric_supply_charges": {
+			"type": "object",
+			"properties": {
+				"charge_description": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Description of the electricity supply charge"
+				},
+				"usage": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Electricity usage amount for the charge"
+				},
+				"unit": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Unit of the electricity usage for the charge"
+				},
+				"rate": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Rate per unit for the electricity supply charge"
+				},
+				"charge_amount": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Total charge amount for the electricity supply"
+				}
+			}
+		},
+		"taxes_and_other_fees": {
+			"type": "object",
+			"properties": {
+				"charge_description": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Description of the tax or other fee"
+				},
+				"usage": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Electricity usage amount for the tax or fee"
+				},
+				"unit": {
+					"type": "string",
+					"inferenceType": "explicit",
+					"instruction": "Unit of the electricity usage for the tax or fee"
+				},
+				"rate": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Rate per unit for the tax or fee"
+				},
+				"charge_amount": {
+					"type": "number",
+					"inferenceType": "explicit",
+					"instruction": "Total charge amount for the tax or fee"
+				}
+			}
+		}
+	},
+	"properties": {
+		"statement_issued_date": {
+			"type": "string",
+			"inferenceType": "explicit",
+			"instruction": "Date when the electricity bill statement was issued"
+		},
+		"amount_due": {
+			"type": "number",
+			"inferenceType": "explicit",
+			"instruction": "Total amount due on the electricity bill"
+		},
+		"due_date": {
+			"type": "string",
+			"inferenceType": "explicit",
+			"instruction": "Date by which the amount due needs to be paid"
+		},
+		"account_number": {
+			"type": "string",
+			"inferenceType": "explicit",
+			"instruction": "Account number associated with the electricity service"
+		},
+		"customer_name": {
+			"type": "string",
+			"inferenceType": "explicit",
+			"instruction": "Name of the customer/account holder"
+		},
+		"service_address": {
+			"$ref": "#/definitions/ADDRESS_DETAILS",
+			"instruction": "Address where the electricity service is provided"
+		},
+		"payment_details": {
+			"$ref": "#/definitions/PAYMENT_DETAILS",
+			"instruction": "-"
+		},
+		"electric_meter_details": {
+			"$ref": "#/definitions/ELECTRIC_METER_DETAILS",
+			"instruction": "-"
+		},
+		"electric_usage_summary": {
+			"$ref": "#/definitions/ELECTRIC_USAGE_SUMMARY",
+			"instruction": "-"
+		},
+		"electric_delivery_charges": {
+			"type": "array",
+			"instruction": "-",
+			"items": {
+				"$ref": "#/definitions/electric_delivery_charges"
+			}
+		},
+		"electric_supply_charges": {
+			"type": "array",
+			"instruction": "-",
+			"items": {
+				"$ref": "#/definitions/electric_supply_charges"
+			}
+		},
+		"taxes_and_other_fees": {
+			"type": "array",
+			"instruction": "-",
+			"items": {
+				"$ref": "#/definitions/taxes_and_other_fees"
+			}
+		},
+		"total_electric_charges": {
+			"type": "number",
+			"inferenceType": "explicit",
+			"instruction": "Total amount of the electricity bill"
+		},
+		"electric_supply_price_to_compare": {
+			"type": "number",
+			"inferenceType": "explicit",
+			"instruction": "Price per kWh for electricity supply"
+		}
+	}
+}
