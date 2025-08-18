@@ -1,0 +1,547 @@
+{
+  "page": 2,
+  "title": "Page 2 - Closing Cost Details",
+  "instruction": "Extract each fee item under its respective category and break down amounts by borrower, seller, and others from Page 2 of the Closing Disclosure.",
+  "sections": [
+    {
+      "section": "Fee Categories",
+      "fee_categories": {
+        "Origination Charges": [
+          {
+            "label": "0.25 % of Loan Amount (Points)",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$405.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Application Fee",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$300.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Underwriting Fee",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$1,097.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          }
+        ],
+        "Origination Charges Total": {
+          "total": "$1,802.00"
+        },
+        "Services Borrower Did Not Shop For": [
+          {
+            "label": "Appraisal Fee",
+            "paid_to": "John Smith Appraisers Inc.",
+            "amount": {
+              "borrower": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": "$405.00"
+            }
+          },
+          {
+            "label": "Credit Report Fee",
+            "paid_to": "Information Inc.",
+            "amount": {
+              "borrower": {
+                "at_closing": "",
+                "before_closing": "$29.80"
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Flood Determination Fee",
+            "paid_to": "Info Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$20.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Flood Monitoring Fee",
+            "paid_to": "Info Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$31.75",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Tax Monitoring Fee",
+            "paid_to": "Info Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$75.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Tax Status Research Fee",
+            "paid_to": "Info Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$80.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          }
+        ],
+        "Services Borrower Did Not Shop For Total": {
+          "total": "$236.55"
+        },
+        "Services Borrower Did Shop For": [
+          {
+            "label": "Pest Inspection Fee",
+            "paid_to": "Pests Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$120.50",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Survey Fee",
+            "paid_to": "Surveys Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$85.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Title - Insurance Binder",
+            "paid_to": "Epsilon Title Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$650.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Title - Lender's Title Insurance",
+            "paid_to": "Epsilon Title Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$500.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Title - Settlement Agent Fee",
+            "paid_to": "Epsilon Title Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$500.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Title - Title Search",
+            "paid_to": "Epsilon Title Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$800.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          }
+        ],
+        "Services Borrower Did Shop For Total": {
+          "total": "$2,655.50"
+        },
+        "Taxes and Government Fees": [
+          {
+            "label": "Recording Fees",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$85.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Recording Fee Deed",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$40.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Recording Fee Mortgage",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$45.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Transfer Tax",
+            "paid_to": "Any State",
+            "amount": {
+              "borrower": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "$950.00",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          }
+        ],
+        "Taxes and Government Fees Total": {
+          "total": "$1,035.00"
+        },
+        "Prepaids": [
+          {
+            "label": "Homeowner's Insurance Premium",
+            "paid_to": "Insurance Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$1,209.96",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Prepaid Interest",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$279.04",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Property Taxes",
+            "paid_to": "Any County USA",
+            "amount": {
+              "borrower": {
+                "at_closing": "$631.80",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          }
+        ],
+        "Prepaids Total": {
+          "total": "$2,120.80"
+        },
+        "Initial Escrow Payment": [
+          {
+            "label": "Homeowner's Insurance",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$201.66",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Property Taxes",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$210.60",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Aggregate Adjustment",
+            "paid_to": "",
+            "amount": {
+              "borrower": {
+                "at_closing": "$0.01",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          }
+        ],
+        "Initial Escrow Payment Total": {
+          "total": "$412.27"
+        },
+        "Other": [
+          {
+            "label": "HOA Capital Contribution",
+            "paid_to": "HOA Acre Inc.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$500.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "HOA Processing Fee",
+            "paid_to": "HOA Acre Inc.", 
+            "amount": {
+              "borrower": {
+                "at_closing": "$150.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Home Inspection Fee",
+            "paid_to": "Engineers Inc.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$750.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": "$750.00"
+            }
+          },
+          {
+            "label": "Home Warranty Fee",
+            "paid_to": "XYZ Warranty Inc.",
+            "amount": {
+              "borrower": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "$450.00",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Real Estate Commission",
+            "paid_to": "Alpha Real Estate Broker",
+            "amount": {
+              "borrower": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "$5,700.00",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Real Estate Commission",
+            "paid_to": "Omega Real Estate Broker",
+            "amount": {
+              "borrower": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "$5,700.00",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          },
+          {
+            "label": "Title - Owner's Title Insurance (optional)",
+            "paid_to": "Epsilon Title Co.",
+            "amount": {
+              "borrower": {
+                "at_closing": "$1,000.00",
+                "before_closing": ""
+              },
+              "seller": {
+                "at_closing": "",
+                "before_closing": ""
+              },
+              "other": ""
+            }
+          }
+        ],
+        "Other Total": {
+          "total": "$14,200.00"
+        },
+        "Total Other Costs": {
+          "Total Other Costs": "$5,018.05"
+        },
+        "Total Closing Costs": [
+          {
+            "label": "Total Closing Costs",
+            "paid_to": "Multiple Entities",
+            "amount": {
+              "borrower": {
+                "at_closing": "$9,682.30",
+                "before_closing": "$29.80"
+              },
+              "seller": {
+                "at_closing": "$12,800.00",
+                "before_closing": ""
+              },
+              "other": "$1,155.00"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
